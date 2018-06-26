@@ -1,0 +1,80 @@
+.data-card {
+	float: left;
+/* 	opacity: 0.5; */
+	/* 	margin: 10px; */
+	-webkit-perspective: 600px;
+}
+
+.data-card .front, .data-card .back {
+	background: #FFF;
+	border-radius: 100px;
+	transition: -webkit-transform 1s;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	/* 	border: 1px solid black; */
+}
+
+.data-card .front {
+	/* 	overflow: hidden; */
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	z-index: 1;
+}
+
+.data-card .back {
+	padding: 20px;
+	padding-top: 0px;
+	width: 150px;
+	height: 150px;
+	-webkit-transform: rotateY(-180deg);
+	/* 	overflow: scroll; */
+}
+
+.data-card:hover .back {
+	-webkit-transform: rotateY(0);
+}
+
+.data-card:hover .front {
+	-webkit-transform: rotateY(180deg);
+}
+
+.card-image {
+	width: 100%;
+	height: 100%;
+}
+
+.spriteCard {
+	content: " ";
+	background: transparent url(../images/sprite_img.png) no-repeat;
+	opacity: 1;
+	font-size: 32px;
+	top: 25px;
+	position: absolute;
+	width: 50px;
+	text-align: center;
+	left: 0;
+	bottom: 0px;
+	right: 0px;
+	margin: 0px auto;
+	vertical-align: middle;
+	background-position: 0px 0px;
+	height: 50px;	
+}
+
+.cardFront {
+	top: 50px;
+	position: absolute;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+	color: #fff;
+}
+.cardBack{
+	top: 50px;
+	position: absolute;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+	color: inherit;
+}
